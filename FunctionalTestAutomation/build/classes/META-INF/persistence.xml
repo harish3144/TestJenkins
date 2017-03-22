@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="testCasePersistance"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+		<class>com.tracfone.testcaseapp.Entity.EnvDetail</class>
+		<class>com.tracfone.testcaseapp.Entity.EnvDetailPK</class>
+		<class>com.tracfone.testcaseapp.Entity.EsnReference</class>
+		<class>com.tracfone.testcaseapp.Entity.Flow</class>
+		<class>com.tracfone.testcaseapp.Entity.PinReference</class>
+		<class>com.tracfone.testcaseapp.Entity.SimReference</class>
+		<class>com.tracfone.testcaseapp.Entity.Testcase</class>
+		<class>com.tracfone.testcaseapp.Entity.TestcaseExecution</class>
+		<class>com.tracfone.testcaseapp.Entity.Testsuite</class>
+		<class>com.tracfone.testcaseapp.Entity.Brand</class>
+		<class>com.tracfone.testcaseapp.Entity.Channel</class>
+		<properties>
+			<property name="openjpa.DynamicEnhancementAgent" value="true" />
+			<property name="openjpa.ConnectionURL"
+				value="jdbc:oracle:thin:@devdb.tracfone.com:7732/CLFYSB32" />
+			<property name="openjpa.ConnectionUserName" value="sa" />
+			<property name="openjpa.ConnectionDriverName" value="oracle.jdbc.driver.OracleDriver" />
+			<property name="openjpa.ConnectionPassword" value="sa4sb32" />
+			<property name="openjpa.RuntimeUnenhancedClasses" value="supported" />
+			<!-- <property name="toplink.ddl-generation" value="update-tables"/> -->
+		</properties>
+	</persistence-unit>
+</persistence>

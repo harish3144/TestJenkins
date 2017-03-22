@@ -1,0 +1,92 @@
+<soapenv:Envelope xmlns:ns1="http://www.tracfone.com/rest/model/v1/common"
+	xmlns:ns2="http://www.tracfone.com/rest/model/v1/common/exception"
+	xmlns:tns="http://b2b.tracfone.com/ServiceOrderManagement"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="http://www.tracfone.com/CommonTypes">
+	<soap:Header xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+		<wsse:Security soap:mustUnderstand="0"
+			xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<wsse:UsernameToken wsu:Id="unt_pu5ARfH1c0Bq6D4a"
+				xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+				<wsse:Username>webuser</wsse:Username>
+				<wsse:Password
+					Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">t!n43p2b</wsse:Password>
+			</wsse:UsernameToken>
+		</wsse:Security>
+	</soap:Header>
+	<soapenv:Body>
+		<tns:validateServiceOrderRequest>
+			<ns1:Header>
+				<ns1:ActivityName_T>ServiceOrder</ns1:ActivityName_T>
+				<ns1:MsgType_T>validateServiceOrderRequest</ns1:MsgType_T>
+				<ns1:Timestamp>2016-12-21T13:14:23-05:00</ns1:Timestamp>
+				<ns1:ConsumerInfo>
+					<ns1:name>language</ns1:name>
+					<ns1:Value>ENG</ns1:Value>
+				</ns1:ConsumerInfo>
+				<ns1:ConsumerInfo>
+					<ns1:name>sourceSystem</ns1:name>
+					<ns1:Value>TAS</ns1:Value>
+				</ns1:ConsumerInfo>
+				<ns1:ConsumerInfo>
+					<ns1:name>brandName</ns1:name>
+					<ns1:Value>NET10</ns1:Value>
+				</ns1:ConsumerInfo>
+			</ns1:Header>
+			<ns1:Payload>
+				<ns1:externalID>123456</ns1:externalID>
+				<ns1:orderDate>2016-11-10 14:59:06 -0500</ns1:orderDate>
+				<ns1:OrderDetails>
+					<ns1:BusinessInteractionRole>
+						<ns1:roleType>customer</ns1:roleType>
+						<ns1:Party>
+							<ns1:partyID>CUSTOMERUNIQEID</ns1:partyID>
+							<ns1:Individual>
+								<ns1:ID>581084680</ns1:ID>
+							</ns1:Individual>
+						</ns1:Party>
+					</ns1:BusinessInteractionRole>
+					<ns1:BusinessInteractionRole>
+						<ns1:roleType>internal</ns1:roleType>
+						<ns1:Party>
+							<ns1:partyID>TAS</ns1:partyID>
+							<ns1:PartyExtension>
+								<ns1:name>partyTransactionId</ns1:name>
+								<ns1:value>web_1231234234424</ns1:value>
+							</ns1:PartyExtension>
+						</ns1:Party>
+					</ns1:BusinessInteractionRole>
+					<ns1:InteractionItems>
+						<ns1:action>ACTIVATION</ns1:action>
+						<ns1:Product>
+							<ns1:productSerialNumber>100000088372981</ns1:productSerialNumber>
+							<ns1:productCategory>HANDSET</ns1:productCategory>
+							<ns1:ProductSpecification>
+								<ns1:brand>WFM</ns1:brand>
+							</ns1:ProductSpecification>
+							<ns1:RelatedServices>
+								<ns1:ID>1340113084</ns1:ID>
+								<ns1:category>SERVICE_PLAN</ns1:category>
+							</ns1:RelatedServices>
+							<ns1:SupportingResources>
+								<ns1:resourceType>AIRTIME_CARD</ns1:resourceType>
+								<ns1:productIdentifer>37645777</ns1:productIdentifer> <!-- SMP -->
+								<ns1:serialNumber>999999937645777</ns1:serialNumber> <!-- PIN -->
+							</ns1:SupportingResources>
+							<ns1:SupportingResources>
+								<ns1:resourceType>SIM_CARD</ns1:resourceType>
+								<ns1:serialNumber>8901260642101519143</ns1:serialNumber> <!-- SIM No -->
+							</ns1:SupportingResources>
+						</ns1:Product>
+						<ns1:Location>
+							<ns1:postalCode>33178</ns1:postalCode>
+						</ns1:Location>
+					</ns1:InteractionItems>
+					<!-- Needed only for Add a line scenario -->
+					<com:BillingAccount>
+						<com:ID>BAN123432443W</com:ID>
+					</com:BillingAccount>
+				</ns1:OrderDetails>
+			</ns1:Payload>
+		</tns:validateServiceOrderRequest>
+	</soapenv:Body>
+</soapenv:Envelope>

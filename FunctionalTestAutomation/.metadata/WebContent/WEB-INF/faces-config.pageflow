@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14786341371991" configfile="/FunctionalTestAutomation/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="jsp/ServiceTestCase" x="338" y="562" id="pf14786379583465" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" outlinks="pf14788043677670" inlinks="pf14786380277686 pf14843477834110" path="/jsp/ServiceTestCase.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="jsp/Login" x="122" y="178" id="pf14786380277687" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14786380277686" path="/jsp/Login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="jsp/AddTestCase." x="122" y="562" id="pf14788043677671" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf14843477834110" inlinks="pf14788043677670" path="/jsp/AddTestCase.jsp"/>
+  <links id="pf14786380277686" target="pf14786379583465" source="pf14786380277687" outcome="Success"/>
+  <links id="pf14788043677670" target="pf14788043677671" source="pf14786379583465" outcome="Success"/>
+  <links id="pf14843477834110" target="pf14786379583465" source="pf14788043677671" outcome="Success"/>
+</pageflow:Pageflow>
